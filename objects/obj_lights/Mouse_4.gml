@@ -1,3 +1,3 @@
-///@desc
+///@description
 
 flip = !flip;

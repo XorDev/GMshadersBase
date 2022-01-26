@@ -1,4 +1,4 @@
-///@desc
+///@description
 
 toggle = !toggle;
 image_index = toggle;

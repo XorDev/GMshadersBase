@@ -1,4 +1,4 @@
-///@desc
+///@description
 
 target = 0;
 target_x = 0;
