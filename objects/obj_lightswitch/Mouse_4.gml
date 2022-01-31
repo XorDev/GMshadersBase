@@ -1,4 +1,4 @@
-///@description
+///@description Toggle the lighting
 
 toggle = !toggle;
 image_index = toggle;
