@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_poster","path":"sprites/spr_poster/spr_poster.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_poster",
     "tags": [],
     "resourceType": "GMSequence",

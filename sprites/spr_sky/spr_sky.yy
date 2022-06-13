@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_sky","path":"sprites/spr_sky/spr_sky.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_sky",
     "tags": [],
     "resourceType": "GMSequence",

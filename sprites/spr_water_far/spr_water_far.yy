@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_water_far","path":"sprites/spr_water_far/spr_water_far.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_water_far",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_room","path":"sprites/spr_room/spr_room.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_room",
     "tags": [],
     "resourceType": "GMSequence",

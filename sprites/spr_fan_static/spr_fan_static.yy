@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fan_static","path":"sprites/spr_fan_static/spr_fan_static.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fan_static",
     "tags": [],
     "resourceType": "GMSequence",

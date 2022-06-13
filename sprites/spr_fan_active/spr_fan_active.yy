@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fan_active","path":"sprites/spr_fan_active/spr_fan_active.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fan_active",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_bookshelf_plant","path":"sprites/spr_bookshelf_plant/spr_bookshelf_plant.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_bookshelf_plant",
     "tags": [],
     "resourceType": "GMSequence",

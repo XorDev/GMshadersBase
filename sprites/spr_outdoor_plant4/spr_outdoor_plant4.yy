@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_outdoor_plant4","path":"sprites/spr_outdoor_plant4/spr_outdoor_plant4.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_outdoor_plant4",
     "tags": [],
     "resourceType": "GMSequence",

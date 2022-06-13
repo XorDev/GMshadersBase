@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_lightswitch","path":"sprites/spr_lightswitch/spr_lightswitch.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_lightswitch",
     "tags": [],
     "resourceType": "GMSequence",

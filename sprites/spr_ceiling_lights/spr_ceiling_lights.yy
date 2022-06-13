@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_ceiling_lights","path":"sprites/spr_ceiling_lights/spr_ceiling_lights.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_ceiling_lights",
     "tags": [],
     "resourceType": "GMSequence",

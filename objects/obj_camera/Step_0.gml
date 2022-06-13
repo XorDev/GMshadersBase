@@ -1,5 +1,13 @@
 ///@description Camera movement
 
+menu = lerp(menu, menu_target, 0.1);
+if (menu_target)
+{
+	window_set_cursor(cr_handpoint);
+	
+	if mouse_check_button(mb_left) menu_target = !menu_target;
+}
+
 //If there is no target, follow the mouse
 if (target == false)
 {
@@ -19,8 +27,8 @@ _view_h = 135*zoom;
 
 //Difference from view position and the target position (with border factoring)
 var _delta_x,_delta_y;
-_delta_x = max(abs(x-target_x)-_view_w+_border,0)*sign(x-target_x);
-_delta_y = max(abs(y-target_y)-_view_h+_border,0)*sign(y-target_y);
+_delta_x = max(abs(x-target_x)-_view_w+_border,0)*sign(x-target_x)*!menu;
+_delta_y = max(abs(y-target_y)-_view_h+_border,0)*sign(y-target_y)*!menu;
 
 //Move toward the target with no border
 if (target == true)

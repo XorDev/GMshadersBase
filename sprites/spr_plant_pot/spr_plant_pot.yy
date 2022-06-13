@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_plant_pot","path":"sprites/spr_plant_pot/spr_plant_pot.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_plant_pot",
     "tags": [],
     "resourceType": "GMSequence",

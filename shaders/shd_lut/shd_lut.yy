@@ -1,11 +1,11 @@
 {
   "type": 1,
   "parent": {
-    "name": "Shaders",
-    "path": "folders/Shaders.yy",
+    "name": "Colors Extended",
+    "path": "folders/Shaders/Colors Extended.yy",
   },
   "resourceVersion": "1.0",
-  "name": "shd_dim",
+  "name": "shd_lut",
   "tags": [],
   "resourceType": "GMShader",
 }

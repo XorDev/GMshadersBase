@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_water_near","path":"sprites/spr_water_near/spr_water_near.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_water_near",
     "tags": [],
     "resourceType": "GMSequence",

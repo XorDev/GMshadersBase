@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_desk","path":"sprites/spr_desk/spr_desk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_desk",
     "tags": [],
     "resourceType": "GMSequence",

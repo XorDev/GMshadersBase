@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_trashcan","path":"sprites/spr_trashcan/spr_trashcan.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_trashcan",
     "tags": [],
     "resourceType": "GMSequence",

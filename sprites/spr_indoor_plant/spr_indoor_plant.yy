@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_indoor_plant","path":"sprites/spr_indoor_plant/spr_indoor_plant.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_indoor_plant",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_calendar","path":"sprites/spr_calendar/spr_calendar.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_calendar",
     "tags": [],
     "resourceType": "GMSequence",
