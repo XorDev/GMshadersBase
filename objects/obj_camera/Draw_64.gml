@@ -10,8 +10,9 @@ for(var i = 0; i<shader_count; i++)
 }
 
 //weights
+var _ls = ds_list_size(weight);
 var _lw = 1,_cw = 1, _nw = weight[|0];
-for(var i = 0; i<4; i++)
+for(var i = 0; i<_ls; i++)
 {
 	surface_set_target(surf);
 	if (i<shader_count)
@@ -47,11 +48,12 @@ for(var i = 0; i<4; i++)
 	surface_reset_target();
 	shader_reset();
 	
+	//gpu_set_blendmode(bm_add);
 	_lw = _cw;
 	_cw = _nw;
 	_nw = i+1<shader_count?weight[|i+1]:1;
 	
-	var _x = lerp(0, w*(i+(_lw-_cw)/4)/4, 1);
+	var _x = lerp(0, w*(i+(_lw-_cw)/4)/4, 1);//
 	var _w = lerp(w, w*(1+_cw)/4, 1);
 	draw_surface_part(surf, _x, 0, _w, h, _x, 0);
 	draw_set_color(#f4ca32);
@@ -59,6 +61,8 @@ for(var i = 0; i<4; i++)
 	
 	draw_set_valign(fa_center);
 	draw_set_alpha(_cw/2);
+	
+	gpu_set_blendmode(bm_normal);
 	
 	var _s = 1.5-abs(_cw-1.5);
 	_x = w*(i+(_lw-1)/4)/4+8

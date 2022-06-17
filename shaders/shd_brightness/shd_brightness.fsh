@@ -1,22 +1,25 @@
 /*
 	"Brightness and Contrast" by Xor
 	
+	This is a simple way of computing contrast and brightness.
 */
 
 varying vec2 v_texcoord;
 varying vec4 v_color;
 
-uniform float u_black_point;
-uniform float u_white_point;
-
+//Contrast intensity (1.0 = default, higher = more contrast)
+uniform float u_contrast;
+//Brightness amount (1.0 = default, higher = brighter)
+uniform float u_brightness;
 
 void main()
 {
-	//Sample base texture
-	vec4 color = texture2D(gm_BaseTexture, v_texcoord);
+	//Start with base colour
+	vec4 color = texture2D(gm_BaseTexture, v_vTexcoord);
 	
-	color.rgb = mix(vec3(u_black_point), vec3(u_white_point), color.rgb);
+	//Compute final color using extrapolation
+	color.rgb = mix(vec3(0.5), color.rgb + u_brightness - 1.0, u_contrast);
 	
-	//Output result with vertex colour factored
+	//Output result with vertex color factored
 	gl_FragColor = v_color * color;
 }

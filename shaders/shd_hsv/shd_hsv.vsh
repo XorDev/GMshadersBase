@@ -1,6 +1,7 @@
 /*
 	"RGB/HSV Transforms" by Xor
 	
+	Standard passthrough vertex shader	
 */
 
 attribute vec3 in_Position;

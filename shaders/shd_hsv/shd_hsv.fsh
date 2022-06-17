@@ -2,7 +2,7 @@
 	"RGB/HSV Transforms" by Xor
 	
 	Just some functions for RGB/HSV conversions.
-	No effect
+	No effect.
 */
 
 varying vec2 v_texcoord;
