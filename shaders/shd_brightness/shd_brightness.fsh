@@ -15,7 +15,7 @@ uniform float u_brightness;
 void main()
 {
 	//Start with base colour
-	vec4 color = texture2D(gm_BaseTexture, v_vTexcoord);
+	vec4 color = texture2D(gm_BaseTexture, v_texcoord);
 	
 	//Compute final color using extrapolation
 	color.rgb = mix(vec3(0.5), color.rgb + u_brightness - 1.0, u_contrast);

@@ -2,7 +2,6 @@
 
 //window_set_fullscreen(true);
 
-
 menu = 1;
 menu_target = 1;
 
