@@ -1,5 +1,9 @@
 ///@description Camera movement
 
+//var _rows = ds_list_size(shaders);
+var _scroll = mouse_wheel_up()-mouse_wheel_down();
+if (_scroll != 0) scroll_target = round(scroll+_scroll);
+scroll = lerp(scroll, scroll_target, .1);
 menu = lerp(menu, menu_target, 0.1);
 if (menu_target)
 {
