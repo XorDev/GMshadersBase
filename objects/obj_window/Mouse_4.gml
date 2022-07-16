@@ -1,9 +1,9 @@
 ///@description
 
-obj_camera.target = !obj_camera.target;
-if (obj_camera.target)
+obj_control.target = !obj_control.target;
+if (obj_control.target)
 {
-	obj_camera.target_x = x+sprite_width/2;
-	obj_camera.target_y = y+sprite_height/2;
-	obj_camera.target_zoom = 0.75;
+	obj_control.target_x = x+sprite_width/2;
+	obj_control.target_y = y+sprite_height/2;
+	obj_control.target_zoom = 0.75;
 }

@@ -24,6 +24,9 @@ zoom = target_zoom;
 application_surface_draw_enable(false);
 draw_set_font(fnt_title);
 
+text_color = #f4ca32;
+text_shadow = merge_color(#f4ca32, 0, 0.35);
+
 //Surface resolution
 w = 1440;
 h = 810;
@@ -35,25 +38,30 @@ scroll_target = 0;
 //h = display_get_height();
 surface_resize(application_surface, w, h);
 
-weight = ds_list_create();
-ds_list_add(weight,[1,1,1]);
-ds_list_add(weight,[1,1,1]);
+demo_init();
+var _color_basics = demo_add_row("Color Basics");
+var _extended_colors = demo_add_row("Extended Colors");
 
-shaders = ds_list_create();
-ds_list_add(shaders,[shd_invert, shd_saturation, shd_tone]);
-ds_list_add(shaders,[shd_hue, shd_lut, shd_brightness]);
+demo_add_shader(_color_basics, shd_invert, "Invert");
+demo_add_shader(_color_basics, shd_saturation, "Saturation");
+demo_add_shader(_color_basics, shd_tone, "Tone");
 
-title = ds_list_create();
-ds_list_add(title,["Invert", "Saturation", "Tone"]);
-ds_list_add(title,["Hue", "LUT", "Brightness"]);
+demo_add_shader(_extended_colors, shd_brightness, "Brightness");
+demo_add_shader(_extended_colors, shd_hue, "Hue");
+demo_add_shader(_extended_colors, shd_lut, "LUT");
+
 surf = -1;
 
 u_saturation = shader_get_uniform(shd_saturation, "u_saturation");
+
 u_tone = shader_get_uniform(shd_tone, "u_tone");
+
 u_hue_shift = shader_get_uniform(shd_hue, "u_hue_shift");
 u_h_saturation = shader_get_uniform(shd_hue, "u_saturation");
+
 u_intensity = shader_get_uniform(shd_lut, "u_intensity");
-u_contrast = shader_get_uniform(shd_brightness, "u_contrast");
-u_brightness = shader_get_uniform(shd_brightness, "u_brightness");
 u_LUT = shader_get_sampler_index(shd_lut, "u_LUT");
 t_LUT = sprite_get_texture(spr_lut, 0);
+
+u_contrast = shader_get_uniform(shd_brightness, "u_contrast");
+u_brightness = shader_get_uniform(shd_brightness, "u_brightness");
