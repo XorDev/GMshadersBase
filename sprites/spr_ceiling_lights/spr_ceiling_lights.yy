@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_ceiling_lights",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 172,
   "height": 11,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"307d4158-54e9-43c9-8b12-c8b4f05081de","path":"sprites/spr_ceiling_lights/spr_ceiling_lights.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"307d4158-54e9-43c9-8b12-c8b4f05081de","path":"sprites/spr_ceiling_lights/spr_ceiling_lights.yy",},"LayerId":{"name":"eb04bf5d-5868-473e-8511-f926be6c7d77","path":"sprites/spr_ceiling_lights/spr_ceiling_lights.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ceiling_lights","path":"sprites/spr_ceiling_lights/spr_ceiling_lights.yy",},"resourceVersion":"1.0","name":"307d4158-54e9-43c9-8b12-c8b4f05081de","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"307d4158-54e9-43c9-8b12-c8b4f05081de",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_ceiling_lights","path":"sprites/spr_ceiling_lights/spr_ceiling_lights.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_ceiling_lights",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"13993e35-279d-49c2-ae8a-fdae5f893c09","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"307d4158-54e9-43c9-8b12-c8b4f05081de","path":"sprites/spr_ceiling_lights/spr_ceiling_lights.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_ceiling_lights","path":"sprites/spr_ceiling_lights/spr_ceiling_lights.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_ceiling_lights",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"eb04bf5d-5868-473e-8511-f926be6c7d77","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"eb04bf5d-5868-473e-8511-f926be6c7d77","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Props",
     "path": "folders/Sprites/Props.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_ceiling_lights",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

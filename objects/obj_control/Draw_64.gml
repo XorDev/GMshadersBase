@@ -25,34 +25,52 @@ for(var j = 0; j<2; j++)
 		if (i<_n)
 		{
 			var _shd = shaders[|_j][|i];
-	
-			shader_set(_shd);
 			draw_clear(c_black);
-	
+
 			switch(_shd)
 			{
 				case shd_saturation:
-				shader_set_uniform_f(u_saturation, 2);
+				shader_set_ext(_shd, 
+				{
+					u_saturation : 2
+				}
+				);
 				break;
 				
 				case shd_tone:
-				shader_set_uniform_f(u_tone, 1.0, 0.75, 0.4, 0);
+				shader_set_ext(_shd, 
+				{
+					u_tone : [ 1.0, 0.75, 0.4, 0 ]
+				}
+				);
 				break;
 				
 				
 				case shd_hue:
-				shader_set_uniform_f(u_h_saturation, 1);
-				shader_set_uniform_f(u_hue_shift, 0.8);
+				shader_set_ext(_shd, 
+				{
+					u_saturation : 1,
+					u_hue_shift : 0.8
+				}
+				);
 				break;
 				
 				case shd_lut:
-				shader_set_uniform_f(u_intensity, 1);
-				texture_set_stage(u_LUT, t_LUT);
+				shader_set_ext(_shd, 
+				{
+					u_intensity : 1,
+					u_LUT : t_LUT
+				}
+				);
 				break;
 				
 				case shd_brightness:
-				shader_set_uniform_f(u_contrast, 2);
-				shader_set_uniform_f(u_brightness, 1);
+				shader_set_ext(_shd, 
+				{
+					u_contrast : 2,
+					u_brightness : 1
+				}
+				);
 				break;
 			}
 		}
