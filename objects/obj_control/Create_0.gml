@@ -51,17 +51,4 @@ demo_add_shader(_extended_colors, shd_hue, "Hue");
 demo_add_shader(_extended_colors, shd_lut, "LUT");
 
 surf = -1;
-
-u_saturation = shader_get_uniform(shd_saturation, "u_saturation");
-
-u_tone = shader_get_uniform(shd_tone, "u_tone");
-
-u_hue_shift = shader_get_uniform(shd_hue, "u_hue_shift");
-u_h_saturation = shader_get_uniform(shd_hue, "u_saturation");
-
-u_intensity = shader_get_uniform(shd_lut, "u_intensity");
-u_LUT = shader_get_sampler_index(shd_lut, "u_LUT");
 t_LUT = sprite_get_texture(spr_lut, 0);
-
-u_contrast = shader_get_uniform(shd_brightness, "u_contrast");
-u_brightness = shader_get_uniform(shd_brightness, "u_brightness");
