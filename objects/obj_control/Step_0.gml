@@ -1,5 +1,6 @@
 ///@description Camera movement
 
+imguier.update();
 
 var _scroll = mouse_wheel_up()-mouse_wheel_down();
 if (_scroll != 0) scroll_target = round(scroll+_scroll);
