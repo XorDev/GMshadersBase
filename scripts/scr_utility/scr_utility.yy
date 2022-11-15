@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "[GLEB] Utility",
-    "path": "folders/[GLEB] Utility.yy",
+    "name": "[Gleb] Utility",
+    "path": "folders/[Gleb] Utility.yy",
   },
 }

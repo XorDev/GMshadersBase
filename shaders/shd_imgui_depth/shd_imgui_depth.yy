@@ -5,6 +5,6 @@
   "type": 1,
   "parent": {
     "name": "Shaders",
-    "path": "folders/[GLEB] Utility/ImGuiGML/Shaders.yy",
+    "path": "folders/[Gleb] Utility/ImGuiGML/Shaders.yy",
   },
 }

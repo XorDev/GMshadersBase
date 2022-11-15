@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "ImGuiGML",
-    "path": "folders/[GLEB] Utility/ImGuiGML.yy",
+    "path": "folders/[Gleb] Utility/ImGuiGML.yy",
   },
 }

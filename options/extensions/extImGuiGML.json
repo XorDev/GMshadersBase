@@ -1,8 +1,5 @@
 {
-  "extensionId": {
-    "name": "extImGuiGML",
-    "path": "extensions/extImGuiGML/extImGuiGML.yy"
-  },
+  "extensionId": null,
   "resourceVersion": "1.0",
   "resourceType": "GMExtensionConfigSet",
   "configurables": null

@@ -61,7 +61,7 @@ u_h_saturation = shader_get_uniform(shd_hue, "u_saturation");
 
 u_intensity = shader_get_uniform(shd_lut, "u_intensity");
 u_LUT = shader_get_sampler_index(shd_lut, "u_LUT");
-t_LUT = sprite_get_texture(spr_lut, 0);
+t_LUT = sprite_get_texture(spr_lut_tension_green, 0);
 
 u_contrast = shader_get_uniform(shd_brightness, "u_contrast");
 u_brightness = shader_get_uniform(shd_brightness, "u_brightness");
@@ -91,6 +91,33 @@ shader_params = { // Temporary.
 modes = {
 	arr: ds_list_to_array(category),
 	index: 0,
+};
+lut = {}; with (lut) { // Textures: https://positlabs.github.io/spark-lut-patch/s
+	Texture = function(_name, _sprite) constructor {
+		name = _name;
+		sprite = _sprite;
+	};
+	
+	arr = [
+		new Texture("Neutral",			spr_lut_neutral),
+		new Texture("Tension Green",	spr_lut_tension_green),
+		new Texture("Moonlight",		spr_lut_moonlight),
+		new Texture("Late Sunset",		spr_lut_late_sunset),
+		new Texture("Edgy Amber",		spr_lut_edgy_amber),
+		new Texture("Solarize",			spr_lut_solarize),
+	];
+	n = array_length(arr);
+	index = 1;
+	
+	change = function(_i) {
+		index = _i;
+		obj_control.t_LUT = sprite_get_texture(arr[index].sprite, 0);
+	};
+	tooltip = function(_i) {
+		if (imgui_item_hovered()) {
+			imgui_tooltip_sprite(arr[_i].sprite, 0, 0.25);	
+		}	
+	}
 };
 
 imguier = new ImGuiWindowNoClose("Parameters", true)
@@ -162,7 +189,55 @@ imguier = new ImGuiWindowNoClose("Parameters", true)
 			};
 			static _lut = function() {
 				imgui_tree_with("LUT", lut, function() {
+					static _texture = function() {
+						static _dropdown = function() {
+							imgui_dropdown_ext("Texture", arr[index].name, function() {
+								static _selectable = function(_texture, _i) {
+									if (imgui_selectable(_texture.name,,, (_i == index))) {
+										change(_i);	
+									}
+								};
+							
+								for (var _i = 0; _i < n; _i++) {
+									var _texture = arr[_i];
+									_selectable(_texture, _i);
+									tooltip(_i);
+								}
+							});
+							tooltip(index);
+						};
+						static _buttons = function() {
+							static _button = function(_name, _dir) {
+								static _tooltip = function(_dir) {
+									if (imgui_item_hovered()) imgui_tooltip_ext(function(_dir) {
+										var _texture = arr[wrap(index + _dir, 0, n - 1)]
+										imgui_text(_texture.name);
+										imgui_separator();
+										imgui_sprite(_texture.sprite,, 0.25);
+									}, _dir);
+								};
+				
+								if (imgui_button(_name)) {
+									index = wrap(index + _dir, 0, n - 1);
+									change(index);
+								}
+								_tooltip(_dir);
+							};
+			
+							_button("<", -1);
+							imgui_same_line();
+							_button(">", +1);
+						};
+						
+						with (obj_control.lut) {
+							_dropdown();
+							imgui_same_line();
+							_buttons();
+						}
+					};
+					
 					intensity = imgui_slider_f("Intensity", intensity, 0, 2);
+					_texture();
 				});
 			};
 		
@@ -178,7 +253,7 @@ imguier = new ImGuiWindowNoClose("Parameters", true)
 		
 		var _index = modes.index;
 		with (shader_params) {
-			_params[_index]();	
+			_params[_index]();
 		}
 	};
 	

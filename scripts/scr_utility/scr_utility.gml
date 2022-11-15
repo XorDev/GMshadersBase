@@ -17,6 +17,7 @@ function ds_list_to_array(_list) {
 	return _array;
 }
 
+
 function ImGuiWindow(_title = "", _enabled = true, _init_cb = noop) constructor {
 	/// @func ImGuiWindow() constructor
 	/// @param {String} [title=empty]
@@ -757,7 +758,7 @@ function imgui_tooltip_sprite(_sprite, _subimg = 0, _xscale = 1, _yscale = _xsca
 	imguigml_end_tooltip();
 }
 function imgui_tooltip_surface(_surf, _xscale = 1, _yscale = _xscale) {
-	/// @func imgui_tooltip_sprite()
+	/// @func imgui_tooltip_surface()
 	/// @param {Asset.GMSprite} sprite
 	/// @param {Real} [subimg=0]
 	/// @param {Real} [xscale=1]
@@ -766,6 +767,15 @@ function imgui_tooltip_surface(_surf, _xscale = 1, _yscale = _xscale) {
 	imguigml_begin_tooltip();
 	imgui_surface(_surf, _xscale, _yscale);
 	imguigml_end_tooltip();
+}
+function imgui_tooltip_ext(_cb, _cb_data = undefined) {
+	/// @func imgui_tooltip_ext()
+	/// @param {Func} [callback=undefined]
+	/// @param {Any} [callback_data=undefined]
+	
+	imguigml_begin_tooltip();
+	_cb(_cb_data);
+	imguigml_end_tooltip();	
 }
 function imgui_qmark(_text) {
 	/// @func imgui_qmark()

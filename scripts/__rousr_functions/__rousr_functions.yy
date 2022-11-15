@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "__internal",
-    "path": "folders/[GLEB] Utility/ImGuiGML/Scripts/extension/__internal.yy",
+    "path": "folders/[Gleb] Utility/ImGuiGML/Scripts/extension/__internal.yy",
   },
 }
