@@ -4,6 +4,8 @@ if !surface_exists(surf) surf = surface_create(w, h);
 
 //WIP: Please don't judge me!!
 
+var _p; // [Gleb] Shortcut for 'shader_params.shader...'. Temporary.
+
 for(var j = 0; j<2; j++)
 {
 	var _j = umod(floor(scroll) + j, rows);
@@ -32,48 +34,56 @@ for(var j = 0; j<2; j++)
 			switch(_shd)
 			{
 				case shd_saturation:
-				shader_set_uniform_f(u_saturation, 2);
+				_p = shader_params.saturation; // [Gleb] Params shortcut. Temporary.
+				shader_set_uniform_f(u_saturation, _p.amount);
 				break;
 				
 				case shd_tone:
-				shader_set_uniform_f(u_tone, 1.0, 0.75, 0.4, 0);
+				_p = shader_params.tone; // [Gleb] Params shortcut. Temporary.
+				var _c = _p.color;
+				var _r = color_get_red(_c) / 255;
+				var _g = color_get_green(_c) / 255;
+				var _b = color_get_blue(_c) / 255;
+				shader_set_uniform_f(u_tone, _r, _g, _b, _p.amount);
 				break;
 				
-				
 				case shd_hue:
-				shader_set_uniform_f(u_h_saturation, 1);
-				shader_set_uniform_f(u_hue_shift, 0.8);
+				_p = shader_params.hue; // [Gleb] Params shortcut. Temporary.
+				shader_set_uniform_f(u_h_saturation, _p.saturation);
+				shader_set_uniform_f(u_hue_shift, _p.shift);
 				break;
 				
 				case shd_lut:
-				shader_set_uniform_f(u_intensity, 1);
+				_p = shader_params.lut; // [Gleb] Params shortcut. Temporary.
+				shader_set_uniform_f(u_intensity, _p.intensity);
 				texture_set_stage(u_LUT, t_LUT);
 				break;
 				
 				case shd_brightness:
-				shader_set_uniform_f(u_contrast, 2);
-				shader_set_uniform_f(u_brightness, 1);
+				_p = shader_params.brightness; // [Gleb] Params shortcut. Temporary.
+				shader_set_uniform_f(u_contrast, _p.contrast);
+				shader_set_uniform_f(u_brightness, _p.brightness);
 				break;
 			}
 		}
 		draw_surface(application_surface,0,0);
-
+		
 		surface_reset_target();
 		shader_reset();
-	
+		
 		_lw = _cw;
 		_cw = _nw;
 		_nw = i+1<_n?weights[|_j][|i+1]:1;
-	
+		
 		var _x = lerp(0, w*(i+(_lw-_cw)/_n)/_n, 1);//
 		var _y = h*(umod(scroll-_j+1,rows)-1);
 		var _w = lerp(w, w*(1+_cw)/_n, 1);
 		draw_surface_part(surf, _x, _y, _w, h, _x, _y);
 		
 		draw_set_font(_cw>1.5? fnt_title2 : fnt_title)
-	
+		
 		draw_set_valign(fa_center);
-	
+		
 		var _s = 1.5-abs(_cw-1.5);
 		_x = w*(i+(_lw-1)/_n)/_n+8;
 		_y += h*0.05+_cw*16;
@@ -105,5 +115,4 @@ for(var j = 0; j<2; j++)
 	//Colored text
 	draw_set_color(text_color);
 	draw_text_transformed(_x, _y, category[|_j], _s, _s, 0);
-
 }
